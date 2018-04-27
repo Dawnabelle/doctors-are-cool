@@ -6,8 +6,8 @@ import './styles.css';
 
 $(function() {
   let backend = new Backend();
-  console.log('test', backend);
+  console.log(backend);
 
-  // make a request
-  backend.request('headache');
+  // make a request from better doctor api
+  backend.request('headache', 'eskensen');
 });
