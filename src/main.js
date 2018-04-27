@@ -22,8 +22,13 @@ $(function() {
       // clear previous results
       resultElm.html('');
 
+      // account for error
+      if ('status' in data) {
+        resultElm.html("I'm sorry... I'm so, so sorry. Error: " + data.status + ": " + data.statusText);
+      }
+
       // when no results, output message
-      if (!data.meta.total) {
+      else if (!data.meta.total) {
         resultElm.html("I'm sorry... I'm so, so sorry. Your query returned no results.");
       }
       console.log(data);
