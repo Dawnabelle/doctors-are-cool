@@ -1,5 +1,6 @@
 body {
   background-image: url('/img/cloud.png');
+  background-repeat: none;
 }
 .results {
   display: none;
