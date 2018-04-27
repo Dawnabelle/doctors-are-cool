@@ -5,9 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(function() {
-  let backend = new Backend();
-  console.log(backend);
+
+  $('#doctor-form').on('submit', function(e){
+    e.preventDefault();
+
+    let backend = new Backend();
+    console.log(backend);
+
+    console.log('it worked');
+  });
 
   // make a request from better doctor api
-  backend.request('headache', 'eskensen');
+  // backend.request('headache', 'Gao');
 });

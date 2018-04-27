@@ -6,7 +6,7 @@ class Backend {
     this.apiKey = process.env.exports.apiKey;
   }
   // main api request handler
-  request( medicalIssue, doctorName ) {
+  request( doctorName, medicalIssue ) {
 
     // make an ajax request
     $.get({
