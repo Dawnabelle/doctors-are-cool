@@ -17,7 +17,15 @@ $(function() {
 
     // make a request from better doctor API
     backend.request(doctorName, ailment, function(data){
+      let resultElm = $('.your-results');
 
+      // clear previous results
+      resultElm.html('');
+
+      // when no results, output message
+      if (!data.meta.total) {
+        resultElm.html("I'm sorry... I'm so, so sorry. Your query returned no results.");
+      }
       console.log(data);
 
     });
