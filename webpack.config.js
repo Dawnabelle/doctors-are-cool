@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -15,10 +16,13 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
+    new CopyWebpackPlugin([
+      { from: 'src/img', to: 'img' }
+    ]),
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Journal',
+      title: 'doctor',
       template: './src/index.html',
       inject: 'body'
     }),
@@ -41,6 +45,17 @@ module.exports = {
         ],
         loader: "eslint-loader"
       },
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: "babel-loader",
+        options: {
+          presets: ['es2015']
+        }
+      }
     ]
   }
 };
