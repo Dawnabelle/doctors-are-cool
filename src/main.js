@@ -9,5 +9,5 @@ $(function() {
   console.log('test', backend);
 
   // make a request
-  backend.request();
+  backend.request('headache');
 });
