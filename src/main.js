@@ -7,4 +7,7 @@ import './styles.css';
 $(function() {
   let backend = new Backend();
   console.log('test', backend);
+
+  // make a request
+  backend.request();
 });
