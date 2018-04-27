@@ -33,6 +33,26 @@ _Everybody needs to see a doctor sometimes, this app will help locate one that c
 
 ### Specs
 
+A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
+
+Input: "PTSD" Output: List of qualified doctors
+
+A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query.
+
+Input: "Johnson" Output: List of doctors named Johnson
+
+If the query response includes any doctors, display: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.
+
+Input: "Johnson" Output: "Dr. Landon Johnson, 414 N Apple St, 503.000.0808, drljohnson.com, accepting new patients"
+
+If the API call results in an error, the application should return a notification that states what the error is.
+
+Input: click Output: "I'm sorry... I'm so, so sorry. There has been an error accessing the database."
+
+If the query response doesn't include any doctors, the application should return a notification that states that no doctors meet the criteria.
+
+Input: "Doctor Who" Output: "I'm sorry... I'm so, so sorry. No results have appeared for your search."
+
 
 ## Setup/Installation Requirements
 
