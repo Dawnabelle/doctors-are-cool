@@ -11,6 +11,7 @@ $(function() {
   // handler form input
   $('.doctor-form').on('submit', function(e){
     e.preventDefault();
+    $('.results').show();
     let doctorName = $('input[name="doctor"]').val() || '';
     let ailment = $('input[name="ailment"]').val() || '';
 

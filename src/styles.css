@@ -1,7 +1,24 @@
 body {
   background-image: url('/img/cloud.png');
-  background-repeat: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: monospace;
 }
+
+.jumbotron {
+  padding: 10px;
+  margin: 10px;
+  background: rgba(200, 80, 54, 0.6);
+}
+
+.doctor-form {
+  padding: 10px;
+}
+
 .results {
   display: none;
+  background: rgba(11, 163, 178, 0.9);
+  padding: 10px;
+  color: white;
+  margin: 10px;
 }
