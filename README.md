@@ -59,8 +59,11 @@ Input: "Doctor Who" Output: "I'm sorry... I'm so, so sorry. No results have appe
 * _Clone this repository to your computer_
 * _Run "npm install" in CLI_
 * _Run "npm run build" in CLI_
-* _{if running api, directions for api key}_
-* _Open index.html in browser_
+* _Navigate to betterdoctors.com_
+* _Sign up/log in to obtain API key_
+* _Create .env file, add your API key, connect to js file_
+* _Run npm install_
+* _Run npm start_
 
 
 ## Known Bugs
